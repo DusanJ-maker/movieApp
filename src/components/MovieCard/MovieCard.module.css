@@ -1,0 +1,32 @@
+.movieContainer{
+    width: 280px ;
+    height: auto;
+    border-radius: 4px;
+}
+.movieTitle{
+    color: antiquewhite;
+}
+
+.movieYear{
+    margin-top: 5px;
+    color: antiquewhite;
+}
+
+.movieContainer img:hover{
+    border: 7px solid rgb(36, 199, 36);
+}
+
+.divInfoCard{
+    margin-top: 20px;
+}
+
+.movieContainer h3{
+    color: rgb(74, 57, 57);
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid yellowgreen;
+    border-radius: 3px;
+    padding: 4px;
+    color: yellowgreen;
+    
+}

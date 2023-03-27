@@ -1,0 +1,47 @@
+/* .heroBackgroundImg{
+  background-image: url(https://img.yts.mx/assets/images/movies/boston_strangler_2023/background.jpg);
+  height: 300px;
+  display: block;
+  z-index: 1;
+  width: 100%;
+  background-size: cover;
+} */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+  
+  .heroInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heroTitle {
+    width: 940px;
+    text-align: center;
+  }
+  
+  .heroTitle h3 {
+    font-size: 2.55em;
+    font-weight: 700;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+    margin-top: 0px;
+    color: #ccc;
+  }
+  
+  .heroContent {
+    font-size: .95em;
+    text-align: center;
+    color: #ccc;
+    width: 650px;
+    margin: 0 auto;
+    line-height: 21px;
+  }
+
+  
+  

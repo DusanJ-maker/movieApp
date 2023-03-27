@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+  
+  width: 100%;
+  background-color: #161616e8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font-family: Arimo, Arial, Helvetica, "Lucida Grande", sans-serif;
+  text-align: center;
+  background: #1f2121;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
+
+}
+
+nav {
+  width: 100%;
+  background-color: #1d1d1d;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+h1{
+  color: white;
+}
+
+

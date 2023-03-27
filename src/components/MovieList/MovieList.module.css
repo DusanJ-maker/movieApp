@@ -1,0 +1,34 @@
+.centralDiv{
+   width: 100%;
+    margin-top: 40px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.movieListContainer {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+}
+
+hr{
+    width: 940px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-style:double;
+    color: rgb(103, 103, 103);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.h3Title {
+    font-size: 2em;
+    font-weight: 700;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+    margin-top: 10px;
+    color: #ccc;
+}

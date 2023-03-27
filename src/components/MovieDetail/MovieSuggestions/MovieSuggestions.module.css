@@ -1,0 +1,10 @@
+.suggestionsGridContainer{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto;
+}
+
+.suggestionMovie > img{
+    height: 200px;
+
+}
