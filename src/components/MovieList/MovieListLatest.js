@@ -8,8 +8,8 @@ function MovieListLatest() {
     const { data: latestMoviesObj = [], isLoading, error } = useGetLatestMoviesQuery();
 
     if (isLoading) {
-        return <div>loading...</div>;
-      }
+        return <h3>loading...</h3>;
+    }
       if (error) {
         return <div>Error...</div>;
       }

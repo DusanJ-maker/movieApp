@@ -8,7 +8,7 @@ function Header() {
   return (
     <>
     <nav className={styles.navbar}>
-      <a href="https://freecodecamp.org" className={styles.logo}>
+      <a href="localhost:3000" className={styles.logo}>
         <img
           src={img}
           alt="Movie logo"

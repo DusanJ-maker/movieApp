@@ -29,7 +29,7 @@ function Footer() {
       </div>
       <div className={styles.footerDivCenter}>
         <ul className={styles.RowFlex}>
-          <li>By using this site you agree to and accept our User Agreement, which can be read here.</li>
+          <p>By using this site you agree to and accept our User Agreement, which can be read here.</p>
         </ul>
       </div>
     </div>

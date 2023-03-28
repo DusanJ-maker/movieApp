@@ -11,8 +11,8 @@ export const movieApi = createApi({
     getPopular: builder.query({
       query: () => "/list_movies.json?limit=4&quality=3D&minimum_rating=8",
     }),
-    getPost: builder.query({
-      query: (movieID) => `/movie_details.json?movie_id=${movieID}`,
+    getMovie: builder.query({
+      query: (movieID) => `/movie_details.json?movie_id=${movieID}&with_images=true&with_cast=true`,
     }),
     getLatestMovies: builder.query({
       query: () => `/list_movies.json/movie_details.json?limit=8&sort_by=year&quality=3D`,
@@ -25,4 +25,4 @@ export const movieApi = createApi({
     }),
   }),
 });
-export const { useGetPopularQuery, useGetPostQuery, useGetLatestMoviesQuery, useGetUpcomingMoviesQuery, useGetSuggestionsQuery } = movieApi;
+export const { useGetPopularQuery, useGetMovieQuery, useGetLatestMoviesQuery, useGetUpcomingMoviesQuery, useGetSuggestionsQuery } = movieApi;

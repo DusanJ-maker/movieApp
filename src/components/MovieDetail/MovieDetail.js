@@ -1,14 +1,16 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useGetPostQuery } from "../../services/movieApi";
+import { useGetMovieQuery } from "../../services/movieApi";
 import styles from "../MovieDetail/MovieDetail.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleDown, faHeart, faFilm, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons'
 import MovieSuggestions from "./MovieSuggestions/MovieSuggestions";
+import MoviePlotAndCast from "./MoviePlotAndCast/MoviePlotAndCast";
+import MovieTrailers from "./MovieTrailers/MovieTrailers";
 
 function MovieDetail() {
   const { movieID } = useParams();
-  const { data, isLoading, isSuccess, error } = useGetPostQuery(movieID);
+  const { data, isLoading, isSuccess, error } = useGetMovieQuery(movieID);
 
   const downloadIcon = <FontAwesomeIcon icon={faCircleDown}/>
   const heartIcon = <FontAwesomeIcon icon={faHeart}/>
@@ -49,10 +51,12 @@ function MovieDetail() {
               <h3>Similar movies</h3>
               <MovieSuggestions movieID={movieID}/>
               </div>
-            
+            </div>
         </div>
-        </div>
-        
+        <MovieTrailers movie={movie} />
+
+       <MoviePlotAndCast/>
+
       </>
     );
   }

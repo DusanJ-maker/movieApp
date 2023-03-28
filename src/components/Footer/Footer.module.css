@@ -24,6 +24,12 @@
     gap: 35px;
 }
 
-li {
-    color: rgb(218, 218, 218);
+.RowFlex li {
+    color: rgb(105, 105, 105);
 }
+
+.RowFlex p {
+    color: rgb(205, 205, 205);
+}
+
+

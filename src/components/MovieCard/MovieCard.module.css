@@ -3,6 +3,7 @@
     height: auto;
     border-radius: 4px;
 }
+
 .movieTitle{
     color: antiquewhite;
 }
@@ -10,10 +11,6 @@
 .movieYear{
     margin-top: 5px;
     color: antiquewhite;
-}
-
-.movieContainer img:hover{
-    border: 7px solid rgb(36, 199, 36);
 }
 
 .divInfoCard{
@@ -30,3 +27,4 @@
     color: yellowgreen;
     
 }
+
