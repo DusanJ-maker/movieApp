@@ -1,7 +1,7 @@
 import React from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import { useGetPopularQuery } from "../../services/movieApi";
-import styles from "../MovieList/MovieList.module.css";
+import styles from "../MovieList/MovieListPopular.module.css";
 
 function MovieListPopular() {
   const { data: popularMoviesObj = [], isLoading, error} = useGetPopularQuery();

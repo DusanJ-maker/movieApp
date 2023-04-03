@@ -38,7 +38,7 @@ function MoviePlotAndCast() {
             <h2>Cast</h2>
             {movie.cast?.map((actor) => {
               return (
-                <div>
+                <div key={actor.imdb_code}>
                   <div className={styles.castInfo}>
                     <a
                       href={`https://www.imdb.com/name/nm${actor.imdb_code}`}

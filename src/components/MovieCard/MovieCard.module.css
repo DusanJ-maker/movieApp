@@ -17,6 +17,12 @@
     margin-top: 20px;
 }
 
+.divInfoCard > h4{
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
 .movieContainer h3{
     color: rgb(74, 57, 57);
     font-size: 18px;

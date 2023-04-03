@@ -35,12 +35,13 @@
   }
   
   .heroContent {
-    font-size: .95em;
+    font-size: 1.1em;
     text-align: center;
     color: #ccc;
     width: 650px;
     margin: 0 auto;
     line-height: 21px;
+    margin-top: 10px;
   }
 
   

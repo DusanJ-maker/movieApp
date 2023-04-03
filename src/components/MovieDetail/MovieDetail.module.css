@@ -7,6 +7,14 @@
     /* border: 3px solid red; */
  }
 
+ .centralDiv h3{
+    font-weight: 700;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+    margin-bottom: 15px;
+    margin-top: 0px;
+    color: #c0c0c0;
+}
+
  .divGrid{
     /* border: 4px solid red; */
     display: grid;
@@ -47,17 +55,28 @@
     align-items: start;
     row-gap: 15px;
     grid-area: stats;
+    min-width: 280px;
  }
 
- .itemGridTwo > h2, h3, h4, h5{
-    font-weight: 700;
+ .itemGridTwo > h3, h4, h5{
+    font-weight: 500;
     text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
     margin-bottom: 15px;
     margin-top: 0px;
-    color: #ccc;
+    color: #c0c0c0;
+    
  }
 
+ .itemGridTwo > h2{
+  font-weight: 700;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+  margin-bottom: 15px;
+  margin-top: 0px;
+  color: #ffffff;
+}
+
  .itemGridTwo > h3 > span{
+  font-weight: 600;
    color: aquamarine;
  }
 
@@ -74,20 +93,21 @@
  .itemGridTwo > h4 > span{
    padding: 5px;
    border: 1px solid rgb(105, 241, 42);
-   background-color: rgba(105, 241, 42, 0.44);
+   background-color: rgba(105, 241, 42, 0.493);
    border-radius: 3px;
+   margin-left: 5px;
  }
 
  .downloadIcon > svg{
-   color: rgb(105, 241, 42);
+   color: #04AA6D;
  }
 
  .likeIcon > svg{
-   color: rgb(255, 30, 30);
+   color: rgb(205, 36, 36);
  }
 
  .starIcon > svg{
-   color: yellow;
+   color: rgb(225, 225, 0);
  }
 
  img {

@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  font-family: Arimo, Arial, Helvetica, "Lucida Grande", sans-serif;
+  font-family: Roboto, Helvetica, sans-serif;
   text-align: center;
   background: #1f2121;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #414345, #232526);

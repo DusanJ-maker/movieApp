@@ -24,7 +24,7 @@
     gap: 35px;
 }
 
-.RowFlex li {
+.RowFlex > li {
     color: rgb(105, 105, 105);
 }
 

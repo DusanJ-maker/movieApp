@@ -26,7 +26,7 @@ function MovieSuggestions({ movieID }) {
       <div  className={styles.suggestionsGridContainer}>
         {movieSuggestions.map((movie) => {
           return (
-              <div className={styles.suggestionMovie}>
+              <div key={movie.id} className={styles.suggestionMovie}>
                 <Link to={`/movieDetail/${movie.id}`}>
                 <img src={movie.medium_cover_image} alt="movieImg"></img>
                 </Link>
