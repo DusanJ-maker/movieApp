@@ -15,8 +15,14 @@ import MovieTrailers from "./MovieTrailers/MovieTrailers";
 import { addMovieDetails } from "../../features/movies/movieSlice";
 import { useDispatch } from "react-redux";
 import MovieTechSpecs from "./MovieTechSpecs/MovieTechSpecs";
+import MovieComments from "./MovieComments/MovieComments";
+import useWindowsSize from "../../hooks/useWindowsSize";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import { users } from "../../users/users";
 
 function MovieDetail() {
+  const size = useWindowsSize();
   const { movieID } = useParams();
   const { data, isLoading, isSuccess, error } = useGetMovieQuery(movieID);
   const dispatch = useDispatch();
@@ -36,6 +42,7 @@ function MovieDetail() {
   if (isLoading) {
     return (
       <div>
+        <Header />
         <h1>loading...</h1>
       </div>
     );
@@ -43,6 +50,7 @@ function MovieDetail() {
   if (error) {
     return (
       <div>
+        <Header />
         <h1>Error...</h1>
       </div>
     );
@@ -50,10 +58,12 @@ function MovieDetail() {
 
   if (isSuccess) {
     const movie = data.data.movie;
+    console.log(users);
     
 
     return (
       <>
+        <Header />
         <div className={styles.centralDiv}>
           <div className={styles.divGrid}>
             <div className={styles.flexImgSection}>
@@ -64,7 +74,6 @@ function MovieDetail() {
             <div className={styles.itemGridTwo}>
               <h2>{movie.title}</h2>
               <h3>Year: {movie.year}</h3>
-              <div></div>
               <h3>
                 Language: <span>[{movie.language}]</span>
               </h3>
@@ -90,17 +99,22 @@ function MovieDetail() {
                 {starIcon} {movie.rating} rating
               </h3>
             </div>
-            <div>
+            <div className={styles.movieSuggestions}>
               <h3>Similar movies</h3>
               <MovieSuggestions movieID={movieID} />
             </div>
+            {size.width < 1023 && size.width > 767 && <MovieTrailers className={styles.trailers} movie={movie}/>}
           </div>
         </div>
-        <MovieTrailers movie={movie} />
+        {size.width > 1023 && <MovieTrailers movie={movie} />}
 
         <MoviePlotAndCast />
 
         <MovieTechSpecs movieID={movieID}/>
+
+        <MovieComments />
+
+        <Footer />
       </>
     );
   }

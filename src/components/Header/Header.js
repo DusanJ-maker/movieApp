@@ -5,6 +5,21 @@ import Hero from "../Hero/Hero";
 import img from "../Header/assets/logo.png";
 
 function Header() {
+
+  const clickBurgerHandler = () => {
+    // const headerBurger = document
+    const overlay = document.getElementById("overlayMobileMenu");
+    const overlayMenu = document.getElementById("overlayMenu");
+    
+    if(overlay.style.display === "block" && overlayMenu.style.display === "block"){
+      overlay.style.display = "none";
+      overlayMenu.style.display = "none";
+    }else{
+      overlay.style.display = "block";
+      overlayMenu.style.display = "block";
+    }
+  }
+
   return (
     <>
       <nav className={styles.navbar}>
@@ -14,6 +29,15 @@ function Header() {
         <span className={styles.headerSlogan}>
           HD movies at the smallest file size.
         </span>
+        <div>
+          <ul>
+            <li className={styles.burger} onClick={clickBurgerHandler}>
+              <div></div>
+              <div></div>
+              <div></div>
+            </li>
+          </ul>
+        </div>
         <ul className={styles.navLinks}>
           <input
             type="text"

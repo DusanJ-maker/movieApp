@@ -1,0 +1,273 @@
+.centralDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    text-align: center;
+    /* border: 3px solid red; */
+ }
+
+.gridDiv{
+    /* border: 4px solid rgb(0, 242, 255); */
+    display: grid;
+    width: 70%;
+    grid-template-columns: 50% 50%;
+    
+}
+
+/* COMMENTS SECTION */
+
+.title{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+}
+
+.gridComments{
+    display: grid;
+    align-items: center;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    margin-bottom: 15px;
+    grid-template-areas: 
+    "img header header header aside"
+    "img footer footer footer aside";
+    background-color: rgba(24, 24, 24, 0.548);
+    padding: 3%;
+    border-radius: 5px;
+}
+
+.img{
+    width: 100px;
+    grid-area: img;
+    /* border: 1px solid yellow; */
+}
+
+.img > img {
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+}
+
+.header{
+    width: auto;
+    text-align: left;
+    justify-self:stretch;
+    grid-area: header;
+    /* border: 1px solid rgb(255, 61, 47); */
+}
+
+.header > h5 {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.footer{
+    width: auto;
+    text-align: left;
+    grid-area: footer;
+    /* border: 1px solid white; */
+}
+
+.aside{
+    width: 60px;
+    grid-area: aside;
+    /* border: 1px solid blue; */
+}
+
+.aside > h4 > svg{
+    color: #04AA6D;
+}
+
+/* REVIEWS */
+.reviewsDiv{
+    text-align: none !important;
+    margin-left: 5%;
+}
+
+.titleReviews{
+    display: flex;
+    justify-content: start;
+    margin-left: 9%;
+    margin-bottom: 15px;
+}
+
+.titleReviews > h4{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.titleReviews > h4 > svg{
+    color: #04AA6D;
+    size: 50px;
+    font-size: 25px;
+}
+
+.flexRow{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 15px;
+    margin-left: 5%;
+}
+
+.flexRow > h4{
+    font-weight: 300;
+}
+
+.flexRow > h4 > svg{
+    color: #04AA6D;
+}
+
+.flexRowBorder{
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 15px;
+    border-bottom: 1px solid grey;
+    margin-left: 5%;
+    
+}
+
+@media only screen and (max-width: 767px){
+    .centralDiv{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 90px;
+        text-align: center;
+        /* border: 3px solid red; */
+     }
+    
+    .gridDiv{
+        /* border: 4px solid rgb(0, 242, 255); */
+        display: grid;
+        width: 80%;
+        grid-template-columns: auto;
+        
+    }
+    
+    /* COMMENTS SECTION */
+    
+    .title{
+        display: flex;
+        justify-content: start;
+        margin-bottom: 20px;
+    }
+    
+    .gridComments{
+        display: grid;
+        align-items: center;
+        /* border: 1px solid red; */
+        justify-content: space-between;
+        margin-bottom: 15px;
+        grid-template-areas: 
+        "img header header header aside"
+        "img footer footer footer aside";
+        background-color: rgba(24, 24, 24, 0.548);
+        padding: 3%;
+        border-radius: 5px;
+    }
+    
+    .img{
+        width: 60px;
+        grid-area: img;
+        /* border: 1px solid yellow; */
+    }
+    
+    .img > img {
+        height: 30px;
+        border-radius: 100%;
+        border: none;
+    }
+    
+    .header{
+        width: auto;
+        text-align: left;
+        justify-self:stretch;
+        grid-area: header;
+        /* border: 1px solid rgb(255, 61, 47); */
+    }
+    
+    .header > h5 {
+        font-weight: 500;
+        font-size: 14px;
+    }
+    
+    .footer{
+        width: auto;
+        text-align: left;
+        grid-area: footer;
+        /* border: 1px solid white; */
+    }
+
+    .footer > h4 {
+        font-size: 0.8em;
+    }
+    
+    .aside{
+        width: 30px;
+        grid-area: aside;
+        /* border: 1px solid blue; */
+    }
+    
+    .aside > h4 > svg{
+        color: #04AA6D;
+    }
+    
+    /* REVIEWS */
+    .reviewsDiv{
+        text-align: none !important;
+        margin-left: 0%;
+    }
+    
+    .titleReviews{
+        display: flex;
+        justify-content: start;
+        margin-left: 0%;
+        margin-bottom: 15px;
+        margin-top: 60px;
+    }
+    
+    .titleReviews > h4{
+        font-weight: 500;
+        font-size: 1.3em;
+    }
+    
+    .titleReviews > h4 > svg{
+        color: #04AA6D;
+        size: 50px;
+        font-size: 17px;
+    }
+    
+    .flexRow{
+        display: flex;
+        justify-content: start;
+        margin-bottom: 15px;
+        margin-left: 5%;
+    }
+    
+    .flexRow > h4{
+        font-weight: 300;
+    }
+    
+    .flexRow > h4 > svg{
+        color: #04AA6D;
+        font-size: 15px;
+    }
+    
+    .flexRowBorder{
+        text-align: justify;
+        display: flex;
+        justify-content: start;
+        margin-bottom: 15px;
+        border-bottom: 1px solid grey;
+        margin-left: 5%;
+        
+    }
+
+    .flexRowBorder > h4{
+        font-size: 0.8em;
+    }
+}
+
+

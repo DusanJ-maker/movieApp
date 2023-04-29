@@ -13,8 +13,8 @@ function Hero() {
         <div className={styles.heroContent}>
           <h4>
             Welcome to the official Movie website. Here you can browse and
-            download YIFY movies in excellent 720p, 1080p, 2160p 4K and 3D
-            quality, all at the smallest file size. YTS Movies.
+            download movies in excellent 720p, 1080p, 2160p 4K and 3D
+            quality, all at the smallest file size.
           </h4>
         </div>
       </div>

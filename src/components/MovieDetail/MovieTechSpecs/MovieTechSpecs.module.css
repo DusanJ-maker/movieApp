@@ -42,6 +42,9 @@
 
  .flexSpecs{
     display: flex;
+    background-color: rgba(24, 24, 24, 0.548);
+    border-radius: 5px;
+    padding: 1%;
     /* border: 2px solid purple; */
     gap: 100px;
  }
@@ -71,4 +74,82 @@
 
     padding: 25px;
 
+}
+
+@media only screen and (max-width: 767px) {
+   .centralDiv{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 120px;
+      /* border: 3px solid red; */
+   }
+  
+   .divGrid{
+      /* border: 4px solid rgb(255, 255, 255); */
+      display: grid;
+      width: 80%;
+      gap: 10px;
+      grid-template-columns: auto;
+      grid-template-rows: 3;
+   }
+  
+   h2{
+      font-size: 1em;
+      font-weight: 500;
+      text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+      color: #ccc;
+   }
+  
+   h3{
+      font-weight: 400;
+      text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+      color: #ccc;
+      font-size: 0.9em;
+   }
+   /* TECH SPECS (ROW 1) */
+  
+   .flexDiv1{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+  
+   .flexSpecs{
+      display: flex;
+      background-color: rgba(24, 24, 24, 0.548);
+      border-radius: 5px;
+      padding: 3%;
+      /* border: 2px solid purple; */
+      gap: 50px;
+   }
+  
+   /* ROW 2 */
+  
+   .flexDiv2{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      gap: 17%;
+      /* border: 2px solid orange; */
+      background-color: rgba(24, 24, 24, 0.548);
+      border-radius: 5px;
+      padding: 15px;
+   }
+  
+  
+   /* ROW 3 */
+  
+   .flexDiv3{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 17%;
+      /* border: 2px solid orange; */
+      background-color: rgba(24, 24, 24, 0.548);
+      border-radius: 5px;
+      padding: 15px;
+  
+  }
 }

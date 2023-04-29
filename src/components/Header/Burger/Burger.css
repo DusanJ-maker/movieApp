@@ -1,0 +1,53 @@
+/* OVERLAY DIV */
+#overlayMobileMenu{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+  }
+
+  /* OVERLAY MENU */
+  #overlayMenu{
+    display: none;
+    width: 160px;
+    height: 200px;
+    margin-top: 7px;
+    margin-right: 5%;
+    background-color: black;
+    opacity: 90%;
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    color: white;
+    border-radius: 5px;
+    z-index: 3;
+  }
+
+  #overlayMenu li{
+    color: white;
+    padding: 0.25rem;
+    margin: 0 2rem;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  #overlayMenu li a{
+    color: white;
+    padding: 0.25rem;
+    margin: 0 2rem;
+    text-decoration: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  #overlayMenu > ul > li::marker{
+    color: greenyellow;
+    font-size: 1.5em;
+  }

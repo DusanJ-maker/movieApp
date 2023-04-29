@@ -22,12 +22,12 @@
   }
   
   .heroTitle {
-    width: 940px;
+    /* width: 940px; */
     text-align: center;
   }
   
   .heroTitle h3 {
-    font-size: 2.55em;
+    font-size: 2.25em;
     font-weight: 700;
     text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
     margin-top: 0px;
@@ -38,10 +38,53 @@
     font-size: 1.1em;
     text-align: center;
     color: #ccc;
-    width: 650px;
+    /* width: 650px; */
     margin: 0 auto;
     line-height: 21px;
     margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  @media only screen and (max-width: 767px){
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+    }
+    
+    .heroInner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .heroTitle {
+      /* width: 940px; */
+      text-align: center;
+    }
+    
+    .heroTitle h3 {
+      font-size: 1.25em;
+      font-weight: 700;
+      text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+      margin-top: 0px;
+      color: #ccc;
+    }
+    
+    .heroContent {
+      font-size: 0.6em;
+      text-align: center;
+      color: #ccc;
+      /* width: 650px; */
+      margin: 0 auto;
+      line-height: 21px;
+      margin-top: 10px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
   }
 
   

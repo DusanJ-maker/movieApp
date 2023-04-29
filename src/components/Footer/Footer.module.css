@@ -21,6 +21,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 35px;
 }
 
@@ -32,4 +33,95 @@
     color: rgb(205, 205, 205);
 }
 
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    .footerContainer {
+        display: grid;
+        background-color: rgba(24, 24, 24, 0.548);
+        padding-top: 15px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin-top: 90px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footerDivCenter {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .RowFlex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .RowFlex > li {
+        color: rgb(105, 105, 105);
+    }
+    
+    .RowFlex p {
+        color: rgb(205, 205, 205);
+        font-size: 1em;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .footerContainer {
+        display: grid;
+        background-color: rgba(24, 24, 24, 0.548);
+        padding-top: 15px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin-top: 90px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footerDivCenter {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .RowFlex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .RowFlex > li {
+        color: rgb(105, 105, 105);
+    }
+    
+    .RowFlex p {
+        color: rgb(205, 205, 205);
+        font-size: 1em;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+}
 
