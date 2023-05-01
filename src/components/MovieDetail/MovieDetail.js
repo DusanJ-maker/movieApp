@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useGetMovieQuery } from "../../services/movieApi";
 import styles from "../MovieDetail/MovieDetail.module.css";
@@ -12,8 +11,6 @@ import {
 import MovieSuggestions from "./MovieSuggestions/MovieSuggestions";
 import MoviePlotAndCast from "./MoviePlotAndCast/MoviePlotAndCast";
 import MovieTrailers from "./MovieTrailers/MovieTrailers";
-import { addMovieDetails } from "../../features/movies/movieSlice";
-import { useDispatch } from "react-redux";
 import MovieTechSpecs from "./MovieTechSpecs/MovieTechSpecs";
 import MovieComments from "./MovieComments/MovieComments";
 import useWindowsSize from "../../hooks/useWindowsSize";
@@ -25,19 +22,11 @@ function MovieDetail() {
   const size = useWindowsSize();
   const { movieID } = useParams();
   const { data, isLoading, isSuccess, error } = useGetMovieQuery(movieID);
-  const dispatch = useDispatch();
 
   const downloadIcon = <FontAwesomeIcon icon={faCircleDown} />;
   const heartIcon = <FontAwesomeIcon icon={faHeart} />;
   const filmIcon = <FontAwesomeIcon icon={faFilm} />;
   const starIcon = <FontAwesomeIcon icon={faStarHalfStroke} />;
-
-  useEffect(() => {
-    if (data) {
-      const movie = data.data.movie;
-      dispatch(addMovieDetails(movie));
-    }
-  }, [dispatch, data]);
 
   if (isLoading) {
     return (
@@ -59,7 +48,7 @@ function MovieDetail() {
   if (isSuccess) {
     const movie = data.data.movie;
     console.log(users);
-    
+
 
     return (
       <>
@@ -78,7 +67,7 @@ function MovieDetail() {
                 Language: <span>[{movie.language}]</span>
               </h3>
               <h4>
-                Available in: 
+                Available in:
                 <span>
                   {movie?.torrents[0].quality}.{movie?.torrents[0].type}
                 </span>
@@ -103,14 +92,14 @@ function MovieDetail() {
               <h3>Similar movies</h3>
               <MovieSuggestions movieID={movieID} />
             </div>
-            {size.width < 1023 && size.width > 767 && <MovieTrailers className={styles.trailers} movie={movie}/>}
+            {size.width < 1023 && size.width > 767 && <MovieTrailers className={styles.trailers} movie={movie} />}
           </div>
         </div>
         {size.width > 1023 && <MovieTrailers movie={movie} />}
 
         <MoviePlotAndCast />
 
-        <MovieTechSpecs movieID={movieID}/>
+        <MovieTechSpecs movieID={movieID} />
 
         <MovieComments />
 

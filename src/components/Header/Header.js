@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import Hero from "../Hero/Hero";
+import ModalAddMovie from "../Modal/ModalAddMovie";
 import img from "../Header/assets/logo.png";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutUser } from "../../features/auth/authSlice";
 
 function Header() {
+  const [showModal, setShowModal] = useState(false);
+
+  const { role } = useSelector(state => state.persistedReducer.auth.userInfo);
+  const dispatch = useDispatch();
 
   const clickBurgerHandler = () => {
     // const headerBurger = document
     const overlay = document.getElementById("overlayMobileMenu");
     const overlayMenu = document.getElementById("overlayMenu");
-    
-    if(overlay.style.display === "block" && overlayMenu.style.display === "block"){
+
+    if (overlay.style.display === "block" && overlayMenu.style.display === "block") {
       overlay.style.display = "none";
       overlayMenu.style.display = "none";
-    }else{
+    } else {
       overlay.style.display = "block";
       overlayMenu.style.display = "block";
     }
@@ -45,8 +52,8 @@ function Header() {
             id="navSearch"
             placeholder="Search.."
           />
-          <li className={styles.navItem}>
-            <Link to="/">Home</Link>
+          <li className={styles.navItemAddMovie}>
+            {role === "admin" && <p onClick={() => setShowModal(true)}>Add movie</p>}
           </li>
           <li className={styles.navItem}>
             <Link to="#">4K</Link>
@@ -59,16 +66,17 @@ function Header() {
           </li>
           <ul className={styles.navLinkGuest}>
             <li>
-              <Link to="#">Login</Link>
+              {!role && <Link to="login">Login</Link>}
             </li>
-            <p className={styles.loginPipe}>|</p>
+            {/* <p className={styles.loginPipe}>|</p> */}
             <li>
-              <Link to="/">Home</Link>
+              {role && <p onClick={() => dispatch(logoutUser())}>Logout</p>}
             </li>
           </ul>
         </ul>
       </nav>
       <Hero />
+      {showModal && <ModalAddMovie setShowModal={setShowModal} />}
     </>
   );
 }

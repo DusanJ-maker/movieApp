@@ -2,16 +2,17 @@ import React from "react";
 import { useState } from "react";
 import styles from "../Login/Login.module.css";
 import { users } from "../../users/users";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addUser } from "../../features/auth/authSlice";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [uname, setUname] = useState('');
     const [pass, setPass] = useState('');
-    const [errorMessages, setErrorMessages] = useState('');
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [responseMessage, setResponseMessages] = useState('');
 
     const disptach = useDispatch();
+    const navigate = useNavigate();
 
     //Submit handler
     const handleSubmit = (e) => {
@@ -24,25 +25,31 @@ const Login = () => {
         if (userData) {
             if (userData.password !== pass) {
                 // Invalid password
-                setErrorMessages("wrong password");
+                setResponseMessages("wrong password");
             }
             //check if USER is logged && dispatchAction
             else if (userData.username === 'isUser' && userData.password === 'isUser') {
-                setIsSubmitted(true);
-                setErrorMessages('succes login!');
+                setResponseMessages('succes login! (user)');
 
-                disptach(addUser({ id: userData.id, name: userData.username, password: userData.password, role: userData.role, img: userData.img }))
+                //dispatch
+                disptach(addUser({ id: userData.id, name: userData.username, password: userData.password, role: userData.role, isLoggedIn: true, img: userData.img }))
+
+                //navigate
+                navigate("/")
             }
             //check if ADMIN is logged && dispatchAction
             else if (userData.username === 'isAdmin' && userData.password === 'isAdmin') {
-                setIsSubmitted(true);
-                setErrorMessages('succes login!');
+                setResponseMessages('succes login! (admin)');
 
-                disptach(addUser({ id: userData.id, name: userData.username, password: userData.password, role: userData.role, img: userData.img }))
+                //dispatch
+                disptach(addUser({ id: userData.id, name: userData.username, password: userData.password, role: userData.role, isLoggedIn: true, img: userData.img }))
+
+                //navigate
+                navigate("/")
             }
         } else {
             // Username not found
-            setErrorMessages("wrong username");
+            setResponseMessages("wrong username");
         }
     };
 
@@ -70,7 +77,7 @@ const Login = () => {
                         />
                         <button type="submit">Login</button>
                     </form>
-                    {<p>{errorMessages}</p>}
+                    {<p>{responseMessage}</p>}
                 </div>
             </div>
         </>
