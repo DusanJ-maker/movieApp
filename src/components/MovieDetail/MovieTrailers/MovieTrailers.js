@@ -22,7 +22,7 @@ function MovieTrailers({ movie }) {
           <div>
             <img src={movie.medium_screenshot_image2} alt="trailerIMG"></img>
             <button onClick={() => setShowModal2(true)}>show</button>
-            </div>
+          </div>
         </div>
         <div>
           <div>

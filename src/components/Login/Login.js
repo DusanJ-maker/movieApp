@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styles from "../Login/Login.module.css";
 import { users } from "../../users/users";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addUser } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
 

@@ -1,82 +1,88 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Header.module.css";
 import Hero from "../Hero/Hero";
 import ModalAddMovie from "../Modal/ModalAddMovie";
-import img from "../Header/assets/logo.png";
+import imgLogo from "../Header/assets/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../features/auth/authSlice";
+import Burger from "./Burger/Burger";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import useWindowsSize from "../../hooks/useWindowsSize";
+
 
 function Header() {
   const [showModal, setShowModal] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
 
-  const { role } = useSelector(state => state.persistedReducer.auth.userInfo);
+  const { role, img, name } = useSelector(state => state.persistedReducer.auth.userInfo);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const clickBurgerHandler = () => {
-    // const headerBurger = document
-    const overlay = document.getElementById("overlayMobileMenu");
-    const overlayMenu = document.getElementById("overlayMenu");
+  const burger = <FontAwesomeIcon icon={faBars} />
+  const size = useWindowsSize();
 
-    if (overlay.style.display === "block" && overlayMenu.style.display === "block") {
-      overlay.style.display = "none";
-      overlayMenu.style.display = "none";
-    } else {
-      overlay.style.display = "block";
-      overlayMenu.style.display = "block";
-    }
+  const loginHandler = () => {
+    navigate('/login');
+  };
+
+  const logoutHandler = () => {
+    dispatch(logoutUser());
   }
+
 
   return (
     <>
       <nav className={styles.navbar}>
-        <a href="localhost:3000" className={styles.logo}>
-          <img src={img} alt="Movie logo" />
-        </a>
+        <Link to="/" className={styles.logo}>
+          <img src={imgLogo} alt="Movie logo" />
+        </Link>
         <span className={styles.headerSlogan}>
           HD movies at the smallest file size.
         </span>
-        <div>
-          <ul>
-            <li className={styles.burger} onClick={clickBurgerHandler}>
-              <div></div>
-              <div></div>
-              <div></div>
-            </li>
-          </ul>
-        </div>
+        {size.width < 1023 && <span onClick={() => setShowInfo(true)}>{burger}</span>}
         <ul className={styles.navLinks}>
-          <input
+          {/* <input
             type="text"
             className={styles.navSearch}
             id="navSearch"
             placeholder="Search.."
-          />
+          /> */}
           <li className={styles.navItemAddMovie}>
             {role === "admin" && <p onClick={() => setShowModal(true)}>Add movie</p>}
           </li>
           <li className={styles.navItem}>
-            <Link to="#">4K</Link>
+            <Link to="/">Home</Link>
+          </li>
+          <li className={styles.navLinkProfile}>
+            <Link to="/profile">Profile</Link>
           </li>
           <li className={styles.navItem}>
-            <Link to="#">Trending</Link>
+            {!role ? <p onClick={loginHandler}>Login</p>
+              : <p onClick={logoutHandler}>Logout</p>}
           </li>
-          <li className={styles.navItem}>
-            <Link to="/">Browse Movies</Link>
+          <li className={styles.userImg}>
+            {role ? <Link to="/profile">
+              <img src={img} alt="userImg"></img>
+            </Link> : <Link to="/login">
+              <img src="https://img.yts.mx/assets/images/users/thumb/default_avatar.jpg" alt="userImg"></img>
+            </Link>
+            }</li>
+          {role ? <li className={styles.userInfo}>
+            <p>Name: {name}</p>
+            <p>Role: {role}</p>
           </li>
-          <ul className={styles.navLinkGuest}>
-            <li>
-              {!role && <Link to="login">Login</Link>}
-            </li>
-            {/* <p className={styles.loginPipe}>|</p> */}
-            <li>
-              {role && <p onClick={() => dispatch(logoutUser())}>Logout</p>}
-            </li>
-          </ul>
+            : <li className={styles.userInfo}>
+              <p>Name: guest</p>
+              <p>Role: guest</p>
+            </li>}
         </ul>
       </nav>
       <Hero />
       {showModal && <ModalAddMovie setShowModal={setShowModal} />}
+      <Burger setShowInfo={setShowInfo} showInfo={showInfo} />
+
     </>
   );
 }

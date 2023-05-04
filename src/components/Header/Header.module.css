@@ -46,6 +46,7 @@ nav {
   input {
     height: 40px;
     width: 150px;
+    margin-right: 30px;
   }
   
    .navItem,
@@ -55,14 +56,25 @@ nav {
     text-decoration: none;
     list-style-type: none;
     color: #919191;
-    font-size: 16px;
+    font-size: 18px;
     
   }
 
   .navItem, p {
-    font-size: 16px;
+    font-size: 18px;
     color: white;
     cursor: pointer;
+  }
+
+  .navItem:hover p {
+    font-size: 18px;
+    color: yellowgreen;
+    cursor: pointer;
+  }
+
+  span > svg{
+    color: #ccc;
+    font-size: 40px;
   }
 
   .navItemAddMovie > p {
@@ -95,6 +107,11 @@ nav {
   .navLinkGuest>li>a {
     color: white;
     
+  }
+
+  .navLinkProfile > a{
+    color: yellowgreen;
+    font-size: 18px;
   }
 
   ul {
@@ -134,6 +151,21 @@ nav {
   
   .loginPipe {
     color: #919191;
+  }
+
+  .userImg > a > img{
+    width: 55px;
+    height: 55px;
+    margin-left: 40px;
+    border-radius: 100%;
+    border: 2px solid #ccc;
+    object-fit: cover;
+  }
+
+  .userInfo > p{
+    font-weight: 200;
+    color: #ccc;
+    cursor:default;
   }
 
   /* TABLET MEDIA QUERY */

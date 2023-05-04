@@ -13,8 +13,8 @@
   /* OVERLAY MENU */
   #overlayMenu{
     display: none;
-    width: 160px;
-    height: 200px;
+    width: 200px;
+    height: 220px;
     margin-top: 7px;
     margin-right: 5%;
     background-color: black;
@@ -31,16 +31,18 @@
     color: white;
     padding: 0.25rem;
     margin: 0 2rem;
-    text-decoration: none;
+    text-decoration: dotted;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
+    list-style-type: disc !important;
+
   }
 
-  #overlayMenu li a{
+  #overlayMenu li a, p{
     color: white;
     padding: 0.25rem;
-    margin: 0 2rem;
+    margin: 0 1rem;
     text-decoration: none;
     font-size: 18px;
     font-style: normal;

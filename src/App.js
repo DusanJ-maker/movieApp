@@ -11,14 +11,14 @@ import Profile from "./components/Profile/Profile";
 function App() {
   return (
     <div className="app">
-      <Burger />
       <BrowserRouter>
+        <Burger />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route element={<ProtectedRoutes />}>
             <Route path="profile" element={<Profile />} />
           </Route>
-          <Route path="login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/movieDetail/:movieID" element={<MovieDetail />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

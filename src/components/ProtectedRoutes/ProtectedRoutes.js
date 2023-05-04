@@ -6,11 +6,12 @@ function ProtectedRoutes() {
 
     const { role } = useSelector(state => state.persistedReducer.auth.userInfo);
 
-    if (role !== "user" || role !== "admin") {
-        return <Navigate to={"/login"} replace />;
+    if (role === "user" || role === "admin") {
+        return <Outlet />;
     }
+    return <Navigate to={"/login"} replace />;
 
-    return <Outlet />;
+
 }
 
 export default ProtectedRoutes

@@ -85,13 +85,23 @@ const ModalAddMovie = ({ setShowModal }) => {
                         onChange={(e) => setMovieName(e.target.value)}
                     />
                     <label htmlFor="movieyear">Movie year</label>
-                    <input
-                        type="number"
-                        id="movieyear"
-                        value={movieYear}
-                        className={styles.input}
-                        onChange={(e) => setMovieYear(e.target.value)}
-                    />
+                    <select value={movieYear} onChange={(e) => setMovieYear(e.target.value)}>
+                        <option value="">Year</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                        <option value="2004">2004</option>
+                        <option value="2003">2003</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                    </select>
                     <button type="submit">Add</button>
                     <button className={styles.btnClose} onClick={() => setShowModal(false)}>Close</button>
                 </form>

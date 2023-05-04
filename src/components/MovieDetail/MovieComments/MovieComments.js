@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../MovieComments/MovieComments.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faHeart } from "@fortawesome/free-solid-svg-icons";
+import AddComment from './AddComment';
 
 function MovieComments() {
 
-  const starIcon = <FontAwesomeIcon icon={faStar} />;
-  const heartIcon = <FontAwesomeIcon icon={faHeart} />;
-
-  const comments = [
+  const [comments, setComments] = useState([
     {
       id: 1,
       avatar: "https://img.yts.mx/assets/images/users/thumb/default_avatar.jpg",
@@ -37,26 +35,30 @@ function MovieComments() {
       footer: "1080p is a wide?",
       likes: 3
     },
-  ]
+  ]);
+
+  const starIcon = <FontAwesomeIcon icon={faStar} />;
+  const heartIcon = <FontAwesomeIcon icon={faHeart} />;
 
   return (
     <div className={styles.centralDiv}>
       <div className={styles.gridDiv}>
         <div>
-            <div className={styles.title}><h2>5 Comments</h2></div>
-            {comments.map((comment) => {
-              return (
-                <div key={comment.id} className={styles.gridComments}>
-                  <div className={styles.img}><img src={comment.avatar} alt='avatarImg'></img></div>
-                  <div className={styles.header}>
-                    <h5>{comment.header}</h5>
-                  </div>
-                  <div className={styles.footer}><h4>{comment.footer}</h4></div>
-                  <div className={styles.aside}>
-                    <h4>{comment.likes} {heartIcon}</h4></div>
+          <div className={styles.title}><h2>5 Comments</h2></div>
+          {comments.map((comment) => {
+            return (
+              <div key={comment.id} className={styles.gridComments}>
+                <div className={styles.img}><img src={comment.avatar} alt='avatarImg'></img></div>
+                <div className={styles.header}>
+                  <h5>{comment.header}</h5>
                 </div>
-              )
-            })}
+                <div className={styles.footer}><h4>{comment.footer}</h4></div>
+                <div className={styles.aside}>
+                  <h4>{comment.likes} {heartIcon}</h4></div>
+              </div>
+            )
+          })}
+          <AddComment addComment={setComments} comments={comments} />
         </div>
         <div className={styles.reviewsDiv}>
           <div className={styles.titleReviews}><h4>{starIcon} Movie reviews</h4></div>

@@ -1,0 +1,99 @@
+.centerDiv{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardContainer > h3 {
+	margin: 10px 0;
+}
+
+.cardContainer  h6 {
+	margin: 5px 0;
+    font-size: 14px;
+    font-weight: 200;
+	text-transform: uppercase;
+}
+
+.cardContainer > p {
+	font-size: 18px;
+	line-height: 21px;
+}
+
+.cardContainer {
+	background-color: #2d2d2d;
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+	padding-top: 30px;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+}
+
+.carContainer .pro {
+	color: #231E39;
+	background-color: #FEBB0B;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 3px 7px;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+.cardContainer .round {
+	border: 1px solid #8e8e8e;
+	border-radius: 50%;
+	padding: 7px;
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.cardContainer button.primary {
+	background-color: #a8a8a8;
+	border: 1px solid #d1d1d1;
+	border-radius: 3px;
+	color: #c1c1c1;
+	font-weight: 500;
+	padding: 10px 25px;
+}
+
+.cardContainer button.primaryGhost {
+	background-color: transparent;
+	color: #c1c1c1;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    column-gap: 10px;
+	background-color: #292929;
+	text-align: left;
+	padding: 15px;
+	margin-top: 30px;
+}
+
+.skills ul {
+    /* display: flex;
+    justify-content: center; */
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.skills ul li {
+	border: 2px solid #707070;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 16px;
+	margin: 0 7px 7px 0;
+	padding: 7px;
+    color: rgb(255, 59, 59)
+}
