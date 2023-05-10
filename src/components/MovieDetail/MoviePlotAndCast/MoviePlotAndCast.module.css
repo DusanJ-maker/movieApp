@@ -31,6 +31,9 @@
   
   .plotFlexDiv > p{
     text-align: start;
+    margin: 0px;
+    padding: 0px; 
+    cursor: default;
     color: rgb(205, 205, 205);
   }
   
@@ -226,6 +229,7 @@
       margin-bottom: 0px;
       align-items: center;
       gap: 40px;
+      margin-right: 40px;
     }
 
     .castInfo > a > h4{

@@ -177,6 +177,8 @@
       flex-direction: column;
       justify-content: start;
       background-color: #cccccc27;
+      width: 300px;
+      height: 410px;
       border-radius: 5px;
       padding: 3%;
       align-items: start;
@@ -188,7 +190,7 @@
    .itemGridTwo > h3, h4, h5{
       font-weight: 500;
       text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
-      margin-bottom: 15px;
+      margin-bottom: 10px !important;
       margin-top: 0px;
       color: #c0c0c0;
       
@@ -307,6 +309,7 @@
       flex-direction: column;
       justify-content: start;
       background-color: #cccccc27;
+      width: 200px;
       border-radius: 5px;
       padding: 3%;
       align-items: start;

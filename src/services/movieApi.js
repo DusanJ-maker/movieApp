@@ -9,7 +9,7 @@ export const movieApi = createApi({
   tagTypes: ["Movie"],
   endpoints: (builder) => ({
     getPopular: builder.query({
-      query: () => "/list_movies.json?limit=4&quality=3D&minimum_rating=8",
+      query: () => "/list_movies.json?limit=4&quality=3D&minimum_rating=3",
     }),
     getMovie: builder.query({
       query: (movieID) => `/movie_details.json?movie_id=${movieID}&with_images=true&with_cast=true`,

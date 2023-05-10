@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import styles from '../MovieComments/AddComment.module.css';
 import { useSelector } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 
 function AddComment({ addComment, comments }) {
-    const { img, name } = useSelector(state => state.persistedReducer.auth.userInfo);
-
+    const { img, name, role } = useSelector(state => state.persistedReducer.auth.userInfo);
+    const navigate = useNavigate();
 
     const [comment, setComment] = useState("");
 
@@ -22,8 +23,12 @@ function AddComment({ addComment, comments }) {
         setComment('');
     }
 
+    const loginHandler = () => {
+        navigate('/login')
+    }
+
     return <>
-        <div className={styles.gridComments}>
+        {role === "admin" || role === "user" ? <div className={styles.gridComments}>
             <div className={styles.header}>
                 <h5>Add comment:</h5>
             </div>
@@ -32,6 +37,11 @@ function AddComment({ addComment, comments }) {
             </div>
             <button onClick={handleComment}>Add</button>
         </div>
+            : <div className={styles.gridComments}>
+                <div className={styles.footer}>
+                </div>
+                <button className={styles.loginBtn} onClick={loginHandler}>Login to add comment</button>
+            </div>}
     </>
 }
 

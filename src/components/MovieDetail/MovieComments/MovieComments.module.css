@@ -45,6 +45,8 @@
 
 .img > img {
     height: 40px;
+    width: 40px;
+    object-fit: cover;
     border-radius: 100%;
     border: none;
 }
@@ -175,7 +177,8 @@
     }
     
     .img > img {
-        height: 30px;
+        height: 40px;
+        width: 40px;
         border-radius: 100%;
         border: none;
     }

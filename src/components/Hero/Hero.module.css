@@ -67,7 +67,7 @@
     }
     
     .heroTitle h3 {
-      font-size: 1.25em;
+      font-size: 1.5em;
       font-weight: 700;
       text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
       margin-top: 0px;
@@ -75,7 +75,7 @@
     }
     
     .heroContent {
-      font-size: 0.6em;
+      font-size: 1em;
       text-align: center;
       color: #ccc;
       /* width: 650px; */

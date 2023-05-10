@@ -16,7 +16,6 @@ import MovieComments from "./MovieComments/MovieComments";
 import useWindowsSize from "../../hooks/useWindowsSize";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import { users } from "../../users/users";
 
 function MovieDetail() {
   const size = useWindowsSize();
@@ -47,7 +46,6 @@ function MovieDetail() {
 
   if (isSuccess) {
     const movie = data.data.movie;
-    console.log(users);
 
 
     return (
@@ -69,10 +67,10 @@ function MovieDetail() {
               <h4>
                 Available in:
                 <span>
-                  {movie?.torrents[0].quality}.{movie?.torrents[0].type}
+                  {movie?.torrents[0]?.quality}.{movie?.torrents[0]?.type}
                 </span>
                 <span>
-                  {movie?.torrents[1].quality}.{movie?.torrents[0].type}
+                  {movie?.torrents[1]?.quality}.{movie?.torrents[0]?.type}
                 </span>
               </h4>
               <h3 className={styles.downloadIcon}>
@@ -92,7 +90,7 @@ function MovieDetail() {
               <h3>Similar movies</h3>
               <MovieSuggestions movieID={movieID} />
             </div>
-            {size.width < 1023 && size.width > 767 && <MovieTrailers className={styles.trailers} movie={movie} />}
+            {size.width < 1023 && size.width > 767 && <MovieTrailers movie={movie} />}
           </div>
         </div>
         {size.width > 1023 && <MovieTrailers movie={movie} />}

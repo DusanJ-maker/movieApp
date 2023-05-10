@@ -10,3 +10,11 @@
 .gridComments h5{
     font-size: 18px;
 }
+
+.loginBtn{
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+    padding: 15px;  
+}

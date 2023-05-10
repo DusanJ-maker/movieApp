@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import styles from "../Login/Login.module.css";
 import { users } from "../../users/users";
@@ -10,6 +10,12 @@ const Login = () => {
     const [uname, setUname] = useState('');
     const [pass, setPass] = useState('');
     const [responseMessage, setResponseMessages] = useState('');
+
+    const inputRef = useRef();
+
+    useEffect(() => {
+        inputRef.current.focus();
+    }, [])
 
     const disptach = useDispatch();
     const navigate = useNavigate();
@@ -61,6 +67,7 @@ const Login = () => {
                     <form className={styles.form} onSubmit={handleSubmit}>
                         <label htmlFor="username">Username</label>
                         <input
+                            ref={inputRef}
                             type="text"
                             id="username"
                             value={uname}
@@ -76,8 +83,8 @@ const Login = () => {
                             onChange={(e) => setPass(e.target.value)}
                         />
                         <button type="submit">Login</button>
+                        {<h3 className={styles.errorMsg}>{responseMessage}</h3>}
                     </form>
-                    {<p>{responseMessage}</p>}
                 </div>
             </div>
         </>

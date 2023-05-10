@@ -47,4 +47,10 @@
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
   }
+
+  @media only screen and (max-width: 1023px) and (min-width: 768px){
+    .modal{
+      width: auto;
+    }
+  }
   

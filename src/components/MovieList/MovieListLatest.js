@@ -9,7 +9,6 @@ import { stateAllMovies } from '../../features/movies/movieSlice';
 function MovieListLatest() {
   const { data: latestMoviesObj = [], isLoading, error } = useGetLatestMoviesQuery();
   const addedMovies = useSelector(stateAllMovies);
-  console.log(addedMovies);
 
   if (isLoading) {
     return <h3>loading...</h3>;

@@ -13,8 +13,12 @@ const ModalAddMovie = ({ setShowModal }) => {
     //submit movie
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (!movieName || !movieYear) {
+            alert('Please enter movie and year')
+            return
+        };
 
-        //dispatch added movie
+        //dispatch added movie (movie ID is hard coded for "view details" purpose)
         dispatch(addMovies({
             id: 10,
             url: "https://yts.mx/movies/ali-the-queens-2021",
@@ -70,7 +74,6 @@ const ModalAddMovie = ({ setShowModal }) => {
 
     }
 
-
     return createPortal(
         <div className={styles.modal}>
             <div className={styles.modalContent}>
@@ -86,7 +89,7 @@ const ModalAddMovie = ({ setShowModal }) => {
                     />
                     <label htmlFor="movieyear">Movie year</label>
                     <select value={movieYear} onChange={(e) => setMovieYear(e.target.value)}>
-                        <option value="">Year</option>
+                        <option value="">select year</option>
                         <option value="2012">2012</option>
                         <option value="2011">2011</option>
                         <option value="2010">2010</option>

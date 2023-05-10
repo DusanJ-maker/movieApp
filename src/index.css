@@ -30,7 +30,7 @@ body {
   height: 100%;
   font-family: Roboto, Helvetica, sans-serif;
   text-align: center;
-  background: #1f2121;  /* fallback for old browsers */
+  background: #1f2121;  
   background: -webkit-linear-gradient(to right, #414345, #232526);
   background: linear-gradient(to right, #414345, #232526);
 

@@ -35,8 +35,15 @@ nav {
   .navLinks {
     display: flex;
     align-items: center;
+    margin-left: 33%;
     gap: 10px;
-    margin-right: 3%;
+  }
+
+  .navLinksUserInfo{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-right: 5%;
   }
 
   .navLinks li{
@@ -52,7 +59,8 @@ nav {
    .navItem,
   a {
     display: inline-block;
-    padding: 5px 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-decoration: none;
     list-style-type: none;
     color: #919191;
@@ -104,13 +112,19 @@ nav {
     align-items: center;
   }
   
-  .navLinkGuest>li>a {
+  /* .navLinkGuest>li>a {
     color: white;
     
-  }
+  } */
 
   .navLinkProfile > a{
-    color: yellowgreen;
+    color: #919191;
+    font-size: 18px;
+    margin-left: 15px;
+  }
+
+  .navLinkProfile:hover > a{
+    color: #ffffff;
     font-size: 18px;
   }
 
@@ -148,22 +162,28 @@ nav {
     padding: 4px 30px;
     background: #1d1d1d
   }
-  
-  .loginPipe {
-    color: #919191;
+
+  .userImg{
+    padding-top: 5px;
+    margin-left: 40px;
   }
 
   .userImg > a > img{
     width: 55px;
     height: 55px;
-    margin-left: 40px;
     border-radius: 100%;
-    border: 2px solid #ccc;
+    padding: 2px;
+    border: 2px solid #ffffff;
     object-fit: cover;
+  }
+
+  .userImg:hover > a > img{
+    border: 2px solid yellowgreen
   }
 
   .userInfo > p{
     font-weight: 200;
+    font-size: 17px;
     color: #ccc;
     cursor:default;
   }
@@ -194,13 +214,21 @@ nav {
     .headerSlogan {
       display: block;
       font-size: 1.2em;
-      margin-left: -17%;
+      margin-left: -12%;
       margin-top: 7px;
       color: #919191;
     }
     
     .navLinks {
       display: none !important;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: 3%;
+    }
+
+    .navLinksUserInfo{
+      display: block;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -227,6 +255,10 @@ nav {
       width: 150px;
     }
     
+    .navItem{
+      display: none !important;
+    }
+
      .navItem,
     a {
       display: inline-block;
@@ -339,6 +371,10 @@ nav {
       height: 40px;
       width: 150px;
     }
+
+    .navItem{
+      display: none !important;
+    }
     
      .navItem,
     a {
@@ -369,7 +405,7 @@ nav {
     }
     
     .logo img {
-      height: 35px;
+      height: 50px;
       border-radius: 6px;
       margin-top: 6px;
       border: none;
@@ -388,9 +424,5 @@ nav {
       -moz-border-radius: 20px;
       padding: 4px 30px;
       background: #1d1d1d
-    }
-    
-    .loginPipe {
-      color: #919191;
     }
   }
