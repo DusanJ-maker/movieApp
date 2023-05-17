@@ -4,7 +4,7 @@ Here I will introduce you to my project - "movieWebsite"
 
 ## How I worked on this project
 
-- My work on this project is based on task. After I've done React.js courses, my mentor asked my to make (clone) YTSMOVIES site (https://yts.mx/),
+- My work on this project was based on a task. After I've done React.js courses, my mentor asked my to make (clone) YTSMOVIES site (https://yts.mx/),
 and he provided me API for that.
 
 - Working on this site was based on my previous knowledge that I acquired on my learning journey...
@@ -36,12 +36,15 @@ and he provided me API for that.
 - Phone responsive design: https://ibb.co/album/1Ghjv0
 
 ### Some code for different logic parts of application:
-- Redux:
-- RTK Query:
-- Auth slice:
-- Router:
-- Login auth logic:
+- Redux: https://i.ibb.co/gVqSSMp/store.png
+- RTK Query: https://i.ibb.co/myjCCR3/rtk-Query.png
+- Auth slice: https://i.ibb.co/wzB6nX6/login-Auth.png
+- Router: https://i.ibb.co/Ks8bK7V/router.png
+- Login auth logic: https://i.ibb.co/wzB6nX6/login-Auth.png
 
-Thanks for reading. Dusan
+
+
+Thanks for reading. 
+Dusan
 
 
