@@ -2,69 +2,46 @@
 
 Here I will introduce you to my project - "movieWebsite"
 
-## Available Scripts
+## How I worked on this project
 
-In the project directory, you can run:
+- My work on this project is based on task. After I've done React.js courses, my mentor asked my to make (clone) YTSMOVIES site (https://yts.mx/),
+and he provided me API for that.
 
-### `npm start`
+- Working on this site was based on my previous knowledge that I acquired on my learning journey...
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- I applied many of React.js concepts in the process of making this project.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- The design is in pure CSS (mainly flexbox+grid for layout).
 
-### `npm test`
+- Components and logic are made by myself.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- In this project I used some packages: Redux Toolkit, RTK Query, React Router, Redux Persist...
 
-### `npm run build`
+### Why this way?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- For state management wanted to use redux... I know some will say it is "overkill", but I tried to practice this way. I know some more other state management solutuons (context concept) would do the job, but as I said it was mostly for practicing purposes and "in good will" to catch modern industry standards.
+- React Router implementation is pretty simple with "protected routes" included.
+- For component styling I used CSS modules.
+- For persisting the state (logged in user for example) I used "Redux Persist", because while reading documentation I figured out it is not good to use "local storage" in pure functions (redux reducer).
+- In app, there are 3 users with 3 separate roles: "user", "admin" and "guest". They have some permissions based on their role on website (like adding movie).
+- There is simple "login" form with some logic behind to handle users auth.
+- API used for making this is provided by YTS: https://yts.mx/api, but I couldn't do any mutations, so for some cases I did it on local (adding movies and comments), and merged data from API call and form inputs so they could be displayed on the UI.
+- I implemented Modals for displaying movie screenshots, and for adding new movie...
+- Components that didn't use global state (redux), had their own local state (useState), like for displaying Modals.
+- For responsive (desktop, tablet and mobile) I used media queries in CSS.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Display parts of application:
+- Desktop responsive design: https://ibb.co/album/QFrhhJ
+- Tablet responsive design: https://ibb.co/album/wyH85S
+- Phone responsive design: https://ibb.co/album/1Ghjv0
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Some code for different logic parts of application:
+- Redux:
+- RTK Query:
+- Auth slice:
+- Router:
+- Login auth logic:
 
-### `npm run eject`
+Thanks for reading. Dusan
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
