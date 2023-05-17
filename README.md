@@ -19,7 +19,7 @@ and he provided me API for that.
 
 ### Why this way?
 
-- For state management wanted to use redux... I know some will say it is "overkill", but I tried to practice this way. I know some more other state management solutuons (context concept) would do the job, but as I said it was mostly for practicing purposes and "in good will" to catch modern industry standards.
+- For state management I wanted to use redux... I know some will say it is "overkill", but I tried to practice this way. I know some more other state management solutions (context concept) would do the job, but as I said, it was mostly for practicing purposes and "in good will" to catch modern industry standards.
 - React Router implementation is pretty simple with "protected routes" included.
 - For component styling I used CSS modules.
 - For persisting the state (logged in user for example) I used "Redux Persist", because while reading documentation I figured out it is not good to use "local storage" in pure functions (redux reducer).
