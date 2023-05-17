@@ -4,7 +4,7 @@ Here I will introduce you to my project - "movieWebsite"
 
 ## How I worked on this project
 
-- My work on this project was based on a task. After I've done React.js courses, my mentor asked my to make (clone) YTSMOVIES site (https://yts.mx/),
+- My work on this project was based on a task. After I've done React.js courses, my mentor asked me to make (clone) YTSMOVIES site (https://yts.mx/),
 and he provided me API for that.
 
 - Working on this site was based on my previous knowledge that I acquired on my learning journey...
