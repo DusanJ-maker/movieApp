@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# MovieWebsite
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Here I will introduce you to my project - "movieWebsite"
 
 ## Available Scripts
 
